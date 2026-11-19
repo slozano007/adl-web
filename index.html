@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className += " js";</script>
 
-  <!-- SEO: servicio principal + zona + nombre. Máx. ~60 caracteres. -->
-  <title>{{SERVICIO_PRINCIPAL}} en {{ZONA}} | {{NOMBRE}}</title>
-  <!-- SEO: qué hace, dónde y por qué elegirlo. Máx. ~155 caracteres. -->
-  <meta name="description" content="{{DESCRIPCION_SEO}}">
-  <link rel="canonical" href="https://{{DOMINIO}}/">
-  <meta name="theme-color" content="#0F3D5E">
+  <!-- SEO: título (lo que se ve en Google) y descripción (máx. ~155 caracteres) -->
+  <title>Distribuidora de alimentos en Bariloche | ADL Alimentos del Lago</title>
+  <meta name="description" content="ADL Alimentos del Lago: distribuidora mayorista de alimentos en Bariloche. Reparto propio a comercios, hoteles y restaurantes de toda la región andina.">
+  <link rel="canonical" href="https://grupoadl.com.ar/">
+  <meta name="theme-color" content="#051C2B">
 
   <!-- Vista previa al compartir (WhatsApp, Instagram, Facebook) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
-  <meta property="og:site_name" content="{{NOMBRE}}">
-  <meta property="og:title" content="{{SERVICIO_PRINCIPAL}} en {{ZONA}} | {{NOMBRE}}">
-  <meta property="og:description" content="{{DESCRIPCION_SEO}}">
-  <meta property="og:url" content="https://{{DOMINIO}}/">
-  <meta property="og:image" content="https://{{DOMINIO}}/img/og-imagen.jpg">
+  <meta property="og:site_name" content="ADL Alimentos del Lago">
+  <meta property="og:title" content="Distribuidora de alimentos en Bariloche | ADL Alimentos del Lago">
+  <meta property="og:description" content="ADL Alimentos del Lago: distribuidora mayorista de alimentos en Bariloche. Reparto propio a comercios, hoteles y restaurantes de toda la región andina.">
+  <meta property="og:url" content="https://grupoadl.com.ar/">
+  <meta property="og:image" content="https://grupoadl.com.ar/img/og-imagen.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -27,32 +27,82 @@
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
+  <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/img/hero.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="/css/styles.css">
 
-  <!-- Datos estructurados: le dicen a Google qué negocio es, dónde trabaja y cómo contactarlo.
-       Cambiá "LocalBusiness" por un tipo más específico si existe (ej. "Plumber", "Electrician",
-       "Restaurant", "BeautySalon", "AutoRepair"). Borrá "address" si no atiende al público. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "{{NOMBRE}}",
-    "description": "{{DESCRIPCION_SEO}}",
-    "url": "https://{{DOMINIO}}/",
-    "image": "https://{{DOMINIO}}/img/og-imagen.jpg",
-    "logo": "https://{{DOMINIO}}/img/logo.svg",
-    "telephone": "{{TELEFONO_INTERNACIONAL}}",
-    "email": "{{EMAIL}}",
+    "@type": "WholesaleStore",
+    "@id": "https://grupoadl.com.ar/#negocio",
+    "name": "ADL Alimentos del Lago",
+    "alternateName": "ADL",
+    "description": "Distribuidora mayorista de alimentos en Bariloche. Reparto propio a almacenes, supermercados, hoteles y restaurantes de la región andina.",
+    "url": "https://grupoadl.com.ar/",
+    "image": "https://grupoadl.com.ar/img/og-imagen.jpg",
+    "logo": "https://grupoadl.com.ar/img/logo.svg",
+    "telephone": "+5492944000000",
+    "email": "info@grupoadl.com.ar",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "{{DIRECCION}}",
-      "addressLocality": "{{LOCALIDAD}}",
-      "addressRegion": "{{PROVINCIA}}",
+      "streetAddress": "Dirección de ejemplo 1234",
+      "addressLocality": "San Carlos de Bariloche",
+      "addressRegion": "Río Negro",
       "addressCountry": "AR"
     },
-    "areaServed": ["{{ZONA_1}}", "{{ZONA_2}}"],
-    "openingHours": "{{HORARIO_SCHEMA}}",
-    "sameAs": ["{{URL_INSTAGRAM}}", "{{URL_GOOGLE_MAPS}}"]
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Bariloche"
+      },
+      {
+        "@type": "City",
+        "name": "Dina Huapi"
+      },
+      {
+        "@type": "City",
+        "name": "Villa La Angostura"
+      },
+      {
+        "@type": "City",
+        "name": "San Martín de los Andes"
+      },
+      {
+        "@type": "City",
+        "name": "Villa Traful"
+      },
+      {
+        "@type": "City",
+        "name": "El Bolsón"
+      },
+      {
+        "@type": "City",
+        "name": "Lago Puelo"
+      },
+      {
+        "@type": "City",
+        "name": "Pilcaniyeu"
+      }
+    ],
+    "openingHours": "Mo-Fr 08:00-17:00",
+    "brand": [
+      {
+        "@type": "Brand",
+        "name": "Valle Frío",
+        "url": "https://grupoadl.com.ar/marcas/valle-frio/"
+      },
+      {
+        "@type": "Brand",
+        "name": "Cumbre Andina",
+        "url": "https://grupoadl.com.ar/marcas/cumbre-andina/"
+      },
+      {
+        "@type": "Brand",
+        "name": "Bosque Nativo",
+        "url": "https://grupoadl.com.ar/marcas/bosque-nativo/"
+      }
+    ]
   }
   </script>
 
@@ -65,164 +115,344 @@
 
   <header class="encabezado">
     <div class="contenedor encabezado__fila">
-      <a href="/" class="marca" aria-label="{{NOMBRE}}, inicio">
-        <img src="/img/logo.svg" alt="{{NOMBRE}}" width="160" height="40">
+      <a href="/" class="marca" aria-label="ADL Alimentos del Lago, inicio">
+        <img class="logo-claro" src="/img/logo-blanco.svg" alt="ADL Alimentos del Lago" width="211" height="44">
+        <img class="logo-oscuro" src="/img/logo.svg" alt="" width="211" height="44" aria-hidden="true">
       </a>
       <button class="menu-boton" aria-expanded="false" aria-controls="menu">
         <span class="sr">Abrir menú</span>
-        <span aria-hidden="true">☰</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
       <nav id="menu" class="menu" aria-label="Principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#resenas">Reseñas</a>
-        <a href="#preguntas">Preguntas</a>
-        <a href="#contacto" class="boton boton--chico">Contacto</a>
+        <a href="/#nosotros">Nosotros</a>
+        <a href="/marcas/">Marcas</a>
+        <a href="/#cobertura">Cobertura</a>
+        <a href="/#clientes">Clientes</a>
+        <a href="/trabaja-con-nosotros/">Trabajá con nosotros</a>
+        <a href="/#contacto">Contacto</a>
+        <a href="/quiero-ser-cliente/" class="boton boton--chico">Quiero ser cliente</a>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
-    <!-- HERO: qué hace + dónde + botón. Es lo primero que ve el visitante y Google. -->
+    <!-- HERO: foto grande + qué hace + dónde + botones. Foto: img/hero.webp (1920 x 1080) -->
     <section class="hero">
-      <div class="contenedor hero__grilla">
+      <div class="hero__foto"><img src="/img/hero.webp" alt="" width="1920" height="1080" fetchpriority="high"></div>
+      <div class="contenedor">
+        <!-- EJEMPLO: volanta, título y bajada -->
+        <p class="volanta aparece-carga" style="--d:.1s">Distribuidora de alimentos · Bariloche</p>
+        <h1 class="titulo-animado">Llevamos alimentos a cada rincón de la <span class="resaltado">Patagonia andina</span></h1>
+        <p class="hero__bajada aparece-carga" style="--d:.7s">Reparto propio, stock permanente y atención personalizada para almacenes, supermercados, hoteles y restaurantes de Bariloche y la región.</p>
+        <div class="botones aparece-carga" style="--d:.85s">
+          <a class="boton" href="/quiero-ser-cliente/">Quiero ser cliente <span class="flecha" aria-hidden="true">→</span></a>
+          <a class="boton boton--claro" href="https://wa.me/5492944000000?text=Hola%2C%20vengo%20de%20la%20web%20de%20ADL" target="_blank" rel="noopener" data-ubicacion="hero"><svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.1 1.1-4.1-.3-.4a10.4 10.4 0 0 1-1.6-5.4C5.2 9.8 10 5.1 16 5.1s10.8 4.7 10.8 10.5S22 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>Escribinos por WhatsApp</a>
+        </div>
+        <!-- EJEMPLO: cifras. Cambiá el número en data-contar y en el texto -->
+        <ul class="cifras aparece-carga" style="--d:1s">
+          <li><strong data-contar="20" data-prefijo="+">+20</strong><span>años en la región</span></li>
+          <li><strong data-contar="500" data-prefijo="+">+500</strong><span>comercios clientes</span></li>
+          <li><strong data-contar="8">8</strong><span>localidades con reparto</span></li>
+          <li><strong data-contar="30" data-prefijo="+">+30</strong><span>marcas en catálogo</span></li>
+        </ul>
+      </div>
+      <span class="indicador-scroll" aria-hidden="true"></span>
+    </section>
+
+    <!-- Cinta de rubros (se desplaza sola). EJEMPLO: cambiá los rubros -->
+    <div class="cinta" aria-label="Rubros que distribuimos">
+      <div class="cinta__pista">
+        <ul><li>Lácteos</li><li>Almacén</li><li>Bebidas</li><li>Congelados</li><li>Fiambres</li><li>Dulces regionales</li><li>Limpieza</li><li>Panificados</li></ul>
+        <ul aria-hidden="true"><li>Lácteos</li><li>Almacén</li><li>Bebidas</li><li>Congelados</li><li>Fiambres</li><li>Dulces regionales</li><li>Limpieza</li><li>Panificados</li></ul>
+      </div>
+    </div>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="nosotros" class="seccion">
+      <div class="contenedor dos-columnas">
+        <div class="collage">
+          <figure class="collage__a" data-cortina><img src="/img/nosotros-1.webp" alt="Camión de reparto de ADL frente al lago" width="600" height="750" loading="lazy"></figure>
+          <figure class="collage__b" data-cortina style="--d:.25s"><img src="/img/nosotros-2.webp" alt="Depósito de ADL en Bariloche" width="500" height="625" loading="lazy"></figure>
+          <p class="sello" data-parallax="-0.08"><strong>+20</strong>años abasteciendo<br>la región</p>
+        </div>
         <div>
-          <p class="etiqueta">{{TRAYECTORIA_CORTA}}</p>
-          <!-- Un solo H1 por página, con servicio + zona -->
-          <h1>{{SERVICIO_PRINCIPAL}} en {{ZONA}}</h1>
-          <p class="hero__bajada">{{PROPUESTA_DE_VALOR}}</p>
-          <div class="botones">
-            <a class="boton boton--whatsapp" href="https://wa.me/{{WHATSAPP}}?text={{MENSAJE_WA}}" target="_blank" rel="noopener" data-ubicacion="hero">Escribinos por WhatsApp</a>
-            <a class="boton boton--secundario" href="tel:{{TELEFONO_INTERNACIONAL}}" data-ubicacion="hero">Llamar al {{TELEFONO_VISIBLE}}</a>
-          </div>
-          <ul class="confianza">
-            <li>{{DATO_CONFIANZA_1}}</li>
-            <li>{{DATO_CONFIANZA_2}}</li>
-            <li>{{DATO_CONFIANZA_3}}</li>
+          <p class="volanta" data-revelar>Quiénes somos</p>
+          <!-- EJEMPLO: título y textos de Quiénes somos -->
+          <h2 data-revelar style="--d:.05s">Una empresa familiar que crece con los comercios del lago</h2>
+          <p class="bajada" data-revelar style="--d:.1s">Desde Bariloche abastecemos a la región andina con un catálogo amplio, logística propia y el trato cercano de siempre.</p>
+          <p data-revelar style="--d:.15s">Somos el nexo entre las mejores marcas del país y los comercios de la zona. Conocemos las rutas, el clima y los tiempos de cada localidad, por eso podemos cumplir con cada entrega, en invierno y en verano.</p>
+          <ul class="pilares">
+            <li data-revelar style="--d:.1s"><span class="icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4h14v12H1z"/><path d="M15 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18" r="2.2"/><circle cx="18.5" cy="18" r="2.2"/></svg></span><div><strong>Logística propia</strong><span>Flota de camiones y reparto refrigerado.</span></div></li>
+            <li data-revelar style="--d:.18s"><span class="icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><div><strong>Entregas puntuales</strong><span>Días fijos de reparto en cada localidad.</span></div></li>
+            <li data-revelar style="--d:.26s"><span class="icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div><strong>Atención personalizada</strong><span>Un preventista asignado a tu comercio.</span></div></li>
+            <li data-revelar style="--d:.34s"><span class="icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg></span><div><strong>Precios mayoristas</strong><span>Listas competitivas y promociones mensuales.</span></div></li>
           </ul>
         </div>
-        <img class="hero__imagen" src="/img/hero.webp" alt="{{ALT_HERO}}" width="720" height="540" fetchpriority="high">
       </div>
     </section>
 
-    <!-- SERVICIOS: un bloque por servicio, cada título con su palabra clave -->
-    <section id="servicios" class="seccion">
+    <!-- NUESTRAS MARCAS: una tarjeta por marca (copiá un <a class="tarjeta-marca"> para sumar otra) -->
+    <section id="marcas" class="seccion seccion--alterna">
       <div class="contenedor">
-        <h2>Nuestros servicios en {{ZONA}}</h2>
-        <div class="tarjetas">
-          <article class="tarjeta">
-            <img src="/img/servicio-1.webp" alt="{{ALT_SERVICIO_1}}" width="480" height="320" loading="lazy">
-            <h3>{{SERVICIO_1}}</h3>
-            <p>{{DESCRIPCION_SERVICIO_1}}</p>
-          </article>
-          <article class="tarjeta">
-            <img src="/img/servicio-2.webp" alt="{{ALT_SERVICIO_2}}" width="480" height="320" loading="lazy">
-            <h3>{{SERVICIO_2}}</h3>
-            <p>{{DESCRIPCION_SERVICIO_2}}</p>
-          </article>
-          <article class="tarjeta">
-            <img src="/img/servicio-3.webp" alt="{{ALT_SERVICIO_3}}" width="480" height="320" loading="lazy">
-            <h3>{{SERVICIO_3}}</h3>
-            <p>{{DESCRIPCION_SERVICIO_3}}</p>
-          </article>
+        <div class="cabecera-seccion">
+          <p class="volanta" data-revelar>Nuestras marcas</p>
+          <h2 data-revelar style="--d:.05s">Marcas que tus clientes ya buscan</h2>
+          <p class="bajada" data-revelar style="--d:.1s">Trabajamos con marcas líderes y productores regionales. Conocé los productos de cada una.</p>
         </div>
+        <div class="marcas">
+          <a class="tarjeta-marca" href="/marcas/valle-frio/" data-revelar style="--d:0.0s">
+            <div class="tarjeta-marca__foto"><img src="/img/marca-valle-frio.webp" alt="" width="800" height="450" loading="lazy"></div>
+            <span class="tarjeta-marca__logo"><img src="/img/marcas/valle-frio.svg" alt="Logo de Valle Frío" width="167" height="40" loading="lazy"></span>
+            <div class="tarjeta-marca__cuerpo">
+              <span class="tarjeta-marca__rubro">Lácteos y frescos</span>
+              <h3>Valle Frío</h3>
+              <p>Leches, quesos, yogures y dulce de leche con cadena de frío garantizada hasta tu comercio.</p>
+              <span class="link-flecha">Ver productos</span>
+            </div>
+          </a>
+          <a class="tarjeta-marca" href="/marcas/cumbre-andina/" data-revelar style="--d:0.12s">
+            <div class="tarjeta-marca__foto"><img src="/img/marca-cumbre-andina.webp" alt="" width="800" height="450" loading="lazy"></div>
+            <span class="tarjeta-marca__logo"><img src="/img/marcas/cumbre-andina.svg" alt="Logo de Cumbre Andina" width="167" height="40" loading="lazy"></span>
+            <div class="tarjeta-marca__cuerpo">
+              <span class="tarjeta-marca__rubro">Almacén y secos</span>
+              <h3>Cumbre Andina</h3>
+              <p>Harinas, fideos, arroz, aceites y conservas: lo básico de cualquier almacén, siempre en stock.</p>
+              <span class="link-flecha">Ver productos</span>
+            </div>
+          </a>
+          <a class="tarjeta-marca" href="/marcas/bosque-nativo/" data-revelar style="--d:0.24s">
+            <div class="tarjeta-marca__foto"><img src="/img/marca-bosque-nativo.webp" alt="" width="800" height="450" loading="lazy"></div>
+            <span class="tarjeta-marca__logo"><img src="/img/marcas/bosque-nativo.svg" alt="Logo de Bosque Nativo" width="167" height="40" loading="lazy"></span>
+            <div class="tarjeta-marca__cuerpo">
+              <span class="tarjeta-marca__rubro">Dulces regionales</span>
+              <h3>Bosque Nativo</h3>
+              <p>Dulces de frutas finas, chocolates y alfajores patagónicos para turismo, regalerías y hoteles.</p>
+              <span class="link-flecha">Ver productos</span>
+            </div>
+          </a>
+        </div>
+        <p class="centrado" style="margin-top:2.5rem" data-revelar><a class="boton boton--secundario" href="/marcas/">Ver todas las marcas <span class="flecha" aria-hidden="true">→</span></a></p>
       </div>
     </section>
 
-    <!-- NOSOTROS / POR QUÉ ELEGIRNOS -->
-    <section id="nosotros" class="seccion seccion--alterna">
-      <div class="contenedor dos-columnas">
+    <!-- ZONAS DE REPARTO Y COBERTURA. EJEMPLO: localidades y días -->
+    <section id="cobertura" class="seccion seccion--oscura">
+      <div class="contenedor cobertura">
         <div>
-          <h2>¿Por qué elegir {{NOMBRE}}?</h2>
-          <p>{{TEXTO_NOSOTROS}}</p>
+          <p class="volanta" data-revelar>Zonas de reparto y cobertura</p>
+          <h2 data-revelar style="--d:.05s">De Bariloche a toda la región andina</h2>
+          <p class="bajada" data-revelar style="--d:.1s">Salimos todos los días desde nuestro depósito en Bariloche con recorridos fijos. Así sabés cuándo llega tu pedido.</p>
+          <ul class="zonas" data-revelar style="--d:.15s">
+          <li><strong>Bariloche</strong><span>Lunes a sábado</span></li>
+          <li><strong>Dina Huapi</strong><span>Lunes, miércoles y viernes</span></li>
+          <li><strong>Villa La Angostura</strong><span>Martes y viernes</span></li>
+          <li><strong>San Martín de los Andes</strong><span>Miércoles</span></li>
+          <li><strong>Villa Traful</strong><span>Cada 15 días</span></li>
+          <li><strong>El Bolsón</strong><span>Martes y jueves</span></li>
+          <li><strong>Lago Puelo</strong><span>Jueves</span></li>
+          <li><strong>Pilcaniyeu</strong><span>Viernes</span></li>
+          </ul>
+          <p style="margin-top:1.5rem" data-revelar>¿Tu localidad no está en la lista? <a href="https://wa.me/5492944000000?text=Hola%2C%20quiero%20saber%20si%20llegan%20a%20mi%20localidad" target="_blank" rel="noopener" data-ubicacion="cobertura" style="color:var(--color-acento);font-weight:700">Consultanos</a></p>
         </div>
-        <ul class="ventajas">
-          <li><strong>{{VENTAJA_1_TITULO}}</strong> {{VENTAJA_1_TEXTO}}</li>
-          <li><strong>{{VENTAJA_2_TITULO}}</strong> {{VENTAJA_2_TEXTO}}</li>
-          <li><strong>{{VENTAJA_3_TITULO}}</strong> {{VENTAJA_3_TEXTO}}</li>
+        <div class="mapa" data-revelar="zoom">
+      <!-- Mapa ilustrativo (no a escala). Para sumar una localidad, copiá un <path class="ruta"> y un <g> y ajustá las coordenadas. -->
+      <svg viewBox="-70 30 500 560" role="img" aria-labelledby="mapa-titulo">
+        <title id="mapa-titulo">Mapa de las zonas de reparto de ADL desde Bariloche</title>
+        <g fill="none" stroke="rgba(255,255,255,.07)">
+          <path d="M-70 130h500M-70 230h500M-70 330h500M-70 430h500M-70 530h500M30 30v560M130 30v560M230 30v560M330 30v560"/>
+        </g>
+        <!-- Cordillera / límite con Chile -->
+        <path d="M40 30 C70 110 30 170 60 240 S40 360 70 430 S50 520 60 590" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.5" stroke-dasharray="4 6"/>
+        <text x="-40" y="300" fill="rgba(255,255,255,.4)" style="font-size:12px;letter-spacing:.3em" transform="rotate(-90 -40 300)">CHILE</text>
+        <!-- Límites provinciales aproximados -->
+        <path d="M212 292 C260 260 320 230 430 200" fill="none" stroke="rgba(255,255,255,.18)" stroke-dasharray="2 6"/>
+        <path d="M60 525 H430" fill="none" stroke="rgba(255,255,255,.18)" stroke-dasharray="2 6"/>
+        <text x="420" y="150" text-anchor="end" fill="rgba(255,255,255,.35)" style="font-size:11px;letter-spacing:.25em">NEUQUÉN</text>
+        <text x="420" y="420" text-anchor="end" fill="rgba(255,255,255,.35)" style="font-size:11px;letter-spacing:.25em">RÍO NEGRO</text>
+        <text x="420" y="560" text-anchor="end" fill="rgba(255,255,255,.35)" style="font-size:11px;letter-spacing:.25em">CHUBUT</text>
+        <!-- Lagos (ilustrativos) -->
+        <path d="M78 230 C95 205 130 215 148 238 C160 255 182 262 205 272 C222 280 218 296 200 296 C182 296 170 290 158 284 C140 276 128 262 112 256 C92 250 70 248 78 230 Z" fill="rgba(120,190,230,.22)"/>
+        <path d="M120 185 C135 178 160 180 170 190 C160 196 135 196 120 185 Z" fill="rgba(120,190,230,.22)"/>
+        <path d="M128 330 C140 322 150 340 140 360 C132 372 120 360 122 345 Z" fill="rgba(120,190,230,.18)"/>
+        <path d="M86 545 C94 538 106 545 100 556 C94 563 84 556 86 545 Z" fill="rgba(120,190,230,.2)"/>
+        <!-- Rutas de reparto -->
+        <g>
+        <path class="ruta" style="--i:0" d="M172 308 Q194 307 210 293"/>
+        <path class="ruta" style="--i:1" d="M172 308 Q147 246 87 215"/>
+        <path class="ruta" style="--i:2" d="M172 308 Q211 184 163 65"/>
+        <path class="ruta" style="--i:3" d="M172 308 Q183 243 150 188"/>
+        <path class="ruta" style="--i:4" d="M172 308 Q108 401 117 515"/>
+        <path class="ruta" style="--i:5" d="M172 308 Q94 412 100 543"/>
+        <path class="ruta" style="--i:6" d="M172 308 Q247 333 320 305"/>
+        </g>
+        <!-- Localidades -->
+        <g><circle class="pulso" cx="210" cy="293" r="7" style="animation-delay:0.0s"/><circle class="punto" cx="210" cy="293" r="5"/><text x="222" y="287" text-anchor="start">Dina Huapi</text></g>
+        <g><circle class="pulso" cx="87" cy="215" r="7" style="animation-delay:0.3s"/><circle class="punto" cx="87" cy="215" r="5"/><text x="75" y="207" text-anchor="end">Villa La Angostura</text></g>
+        <g><circle class="pulso" cx="163" cy="65" r="7" style="animation-delay:0.6s"/><circle class="punto" cx="163" cy="65" r="5"/><text x="175" y="70" text-anchor="start">San Martín de los Andes</text></g>
+        <g><circle class="pulso" cx="150" cy="188" r="7" style="animation-delay:0.9s"/><circle class="punto" cx="150" cy="188" r="5"/><text x="162" y="192" text-anchor="start">Villa Traful</text></g>
+        <g><circle class="pulso" cx="117" cy="515" r="7" style="animation-delay:1.2s"/><circle class="punto" cx="117" cy="515" r="5"/><text x="129" y="520" text-anchor="start">El Bolsón</text></g>
+        <g><circle class="pulso" cx="100" cy="543" r="7" style="animation-delay:1.5s"/><circle class="punto" cx="100" cy="543" r="5"/><text x="112" y="551" text-anchor="start">Lago Puelo</text></g>
+        <g><circle class="pulso" cx="320" cy="305" r="7" style="animation-delay:1.8s"/><circle class="punto" cx="320" cy="305" r="5"/><text x="306" y="291" text-anchor="start">Pilcaniyeu</text></g>
+        <!-- Base: Bariloche -->
+        <g class="base">
+          <circle class="pulso" cx="172" cy="308" r="12"/>
+          <circle cx="172" cy="308" r="9" fill="var(--color-acento)" stroke="#fff" stroke-width="3"/>
+          <text x="158" y="334" text-anchor="end">Bariloche · Depósito</text>
+        </g>
+      </svg>
+    </div>
+      </div>
+    </section>
+
+    <!-- CLIENTES QUE CONFÍAN EN NOSOTROS. Logos en img/clientes/ (SVG o PNG, fondo transparente) -->
+    <section id="clientes" class="seccion">
+      <div class="contenedor">
+        <div class="cabecera-seccion centrado">
+          <p class="volanta" data-revelar>Clientes</p>
+          <h2 data-revelar style="--d:.05s">Comercios que confían en nosotros</h2>
+          <p class="bajada" data-revelar style="--d:.1s">Desde el almacén de barrio hasta los hoteles más grandes de la zona.</p>
+        </div>
+        <ul class="rubros" data-revelar>
+          <li>Almacenes</li><li>Supermercados</li><li>Hoteles</li><li>Restaurantes</li><li>Kioscos</li><li>Panaderías</li><li>Regionales</li>
+        </ul>
+        <ul class="logos">
+          <li data-revelar style="--d:0.00s"><img src="/img/clientes/cliente-1.svg" alt="Logo de cliente de ejemplo 1" width="180" height="54" loading="lazy"></li>
+          <li data-revelar style="--d:0.08s"><img src="/img/clientes/cliente-2.svg" alt="Logo de cliente de ejemplo 2" width="180" height="54" loading="lazy"></li>
+          <li data-revelar style="--d:0.16s"><img src="/img/clientes/cliente-3.svg" alt="Logo de cliente de ejemplo 3" width="180" height="54" loading="lazy"></li>
+          <li data-revelar style="--d:0.24s"><img src="/img/clientes/cliente-4.svg" alt="Logo de cliente de ejemplo 4" width="180" height="54" loading="lazy"></li>
+          <li data-revelar style="--d:0.00s"><img src="/img/clientes/cliente-5.svg" alt="Logo de cliente de ejemplo 5" width="180" height="54" loading="lazy"></li>
+          <li data-revelar style="--d:0.08s"><img src="/img/clientes/cliente-6.svg" alt="Logo de cliente de ejemplo 6" width="180" height="54" loading="lazy"></li>
+          <li data-revelar style="--d:0.16s"><img src="/img/clientes/cliente-7.svg" alt="Logo de cliente de ejemplo 7" width="180" height="54" loading="lazy"></li>
+          <li data-revelar style="--d:0.24s"><img src="/img/clientes/cliente-8.svg" alt="Logo de cliente de ejemplo 8" width="180" height="54" loading="lazy"></li>
+        </ul>
+        <!-- EJEMPLO: testimonio. Usá solo frases reales de clientes (con su permiso) o borrá este bloque -->
+        <figure class="testimonio" data-revelar>
+          <blockquote>Con ADL nunca nos quedamos sin mercadería, ni en temporada alta. El preventista pasa siempre el mismo día y el pedido llega completo.</blockquote>
+          <figcaption>Nombre Apellido · Almacén de ejemplo, Dina Huapi</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- GALERÍA DE FOTOS REALES. Fotos en img/galeria-1.webp ... (las "altas" en vertical 1200 x 1500, el resto 1200 x 800) -->
+    <section id="galeria" class="seccion seccion--alterna">
+      <div class="contenedor">
+        <div class="cabecera-seccion">
+          <p class="volanta" data-revelar>Galería</p>
+          <h2 data-revelar style="--d:.05s">Así trabajamos todos los días</h2>
+          <p class="bajada" data-revelar style="--d:.1s">Nuestro depósito, nuestra flota y nuestro equipo en la ruta. Tocá una foto para verla grande.</p>
+        </div>
+        <ul class="galeria">
+          <li class="alta" data-revelar="zoom" style="--d:0.00s"><button type="button" data-visor="/img/galeria-1.webp" aria-label="Ampliar foto: Camión de reparto de ADL en la ruta"><img src="/img/galeria-1.webp" alt="Camión de reparto de ADL en la ruta" width="1200" height="1500" loading="lazy"></button></li>
+          <li class="ancha" data-revelar="zoom" style="--d:0.08s"><button type="button" data-visor="/img/galeria-2.webp" aria-label="Ampliar foto: Depósito de ADL con mercadería ordenada"><img src="/img/galeria-2.webp" alt="Depósito de ADL con mercadería ordenada" width="1200" height="800" loading="lazy"></button></li>
+          <li class="" data-revelar="zoom" style="--d:0.16s"><button type="button" data-visor="/img/galeria-3.webp" aria-label="Ampliar foto: Paisaje del lago Nahuel Huapi"><img src="/img/galeria-3.webp" alt="Paisaje del lago Nahuel Huapi" width="1200" height="800" loading="lazy"></button></li>
+          <li class="" data-revelar="zoom" style="--d:0.24s"><button type="button" data-visor="/img/galeria-4.webp" aria-label="Ampliar foto: Pasillo del depósito"><img src="/img/galeria-4.webp" alt="Pasillo del depósito" width="1200" height="1500" loading="lazy"></button></li>
+          <li class="ancha" data-revelar="zoom" style="--d:0.00s"><button type="button" data-visor="/img/galeria-5.webp" aria-label="Ampliar foto: Reparto en Villa La Angostura"><img src="/img/galeria-5.webp" alt="Reparto en Villa La Angostura" width="1200" height="800" loading="lazy"></button></li>
+          <li class="ancha" data-revelar="zoom" style="--d:0.08s"><button type="button" data-visor="/img/galeria-6.webp" aria-label="Ampliar foto: Preparación de pedidos"><img src="/img/galeria-6.webp" alt="Preparación de pedidos" width="1200" height="800" loading="lazy"></button></li>
+          <li class="" data-revelar="zoom" style="--d:0.16s"><button type="button" data-visor="/img/galeria-7.webp" aria-label="Ampliar foto: Reparto nocturno"><img src="/img/galeria-7.webp" alt="Reparto nocturno" width="1200" height="1500" loading="lazy"></button></li>
+          <li class="" data-revelar="zoom" style="--d:0.24s"><button type="button" data-visor="/img/galeria-8.webp" aria-label="Ampliar foto: Llegando a un cliente en Dina Huapi"><img src="/img/galeria-8.webp" alt="Llegando a un cliente en Dina Huapi" width="1200" height="800" loading="lazy"></button></li>
         </ul>
       </div>
     </section>
 
-    <!-- RESEÑAS: solo reseñas reales del cliente (Google Maps, WhatsApp). Si no hay, borrar la sección. -->
-    <section id="resenas" class="seccion">
+    <section class="seccion" aria-labelledby="llamado-titulo">
       <div class="contenedor">
-        <h2>Lo que dicen nuestros clientes</h2>
-        <div class="resenas">
-          <figure class="resena">
-            <blockquote>{{RESENA_1}}</blockquote>
-            <figcaption>{{AUTOR_RESENA_1}}</figcaption>
-          </figure>
-          <figure class="resena">
-            <blockquote>{{RESENA_2}}</blockquote>
-            <figcaption>{{AUTOR_RESENA_2}}</figcaption>
-          </figure>
-          <figure class="resena">
-            <blockquote>{{RESENA_3}}</blockquote>
-            <figcaption>{{AUTOR_RESENA_3}}</figcaption>
-          </figure>
+        <div class="llamado" data-revelar="zoom">
+          <div>
+            <h2 id="llamado-titulo">¿Tenés un comercio en la región?</h2>
+            <p>Sumate a los cientos de almacenes, hoteles y restaurantes que ya reciben su mercadería con ADL. Completá el formulario y un asesor te contacta.</p>
+          </div>
+          <div class="botones">
+            <a class="boton" href="/quiero-ser-cliente/">Quiero ser cliente <span class="flecha" aria-hidden="true">→</span></a>
+            <a class="boton boton--claro" href="https://wa.me/5492944000000?text=Hola%2C%20vengo%20de%20la%20web%20de%20ADL" target="_blank" rel="noopener" data-ubicacion="llamado"><svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.1 1.1-4.1-.3-.4a10.4 10.4 0 0 1-1.6-5.4C5.2 9.8 10 5.1 16 5.1s10.8 4.7 10.8 10.5S22 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>WhatsApp</a>
+          </div>
         </div>
-        <p class="centrado"><a href="{{URL_GOOGLE_MAPS}}" target="_blank" rel="noopener">Ver todas las reseñas en Google</a></p>
-      </div>
-    </section>
-
-    <!-- PREGUNTAS FRECUENTES: responden búsquedas reales y ayudan en Google y en buscadores con IA -->
-    <section id="preguntas" class="seccion seccion--alterna">
-      <div class="contenedor angosto">
-        <h2>Preguntas frecuentes</h2>
-        <details>
-          <summary>{{PREGUNTA_1}}</summary>
-          <p>{{RESPUESTA_1}}</p>
-        </details>
-        <details>
-          <summary>{{PREGUNTA_2}}</summary>
-          <p>{{RESPUESTA_2}}</p>
-        </details>
-        <details>
-          <summary>{{PREGUNTA_3}}</summary>
-          <p>{{RESPUESTA_3}}</p>
-        </details>
-        <details>
-          <summary>¿En qué zonas trabajan?</summary>
-          <p>{{ZONAS_DETALLE}}</p>
-        </details>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="seccion">
-      <div class="contenedor dos-columnas">
-        <div>
-          <h2>Pedí tu presupuesto</h2>
-          <p>{{TEXTO_CONTACTO}}</p>
-          <div class="botones">
-            <a class="boton boton--whatsapp" href="https://wa.me/{{WHATSAPP}}?text={{MENSAJE_WA}}" target="_blank" rel="noopener" data-ubicacion="contacto">WhatsApp</a>
-            <a class="boton boton--secundario" href="tel:{{TELEFONO_INTERNACIONAL}}" data-ubicacion="contacto">Llamar</a>
+    <section id="contacto" class="seccion seccion--alterna">
+      <div class="contenedor">
+        <div class="dos-columnas" style="align-items:end">
+          <div>
+            <p class="volanta" data-revelar>Contacto</p>
+            <h2 data-revelar style="--d:.05s">Hablemos de tu próximo pedido</h2>
+          </div>
+          <div>
+            <p class="bajada" data-revelar style="--d:.1s">Escribinos por WhatsApp, llamanos o acercate al depósito. Te respondemos en el día.</p>
+            <div class="botones" data-revelar style="--d:.15s">
+              <a class="boton boton--whatsapp" href="https://wa.me/5492944000000?text=Hola%2C%20vengo%20de%20la%20web%20de%20ADL" target="_blank" rel="noopener" data-ubicacion="contacto"><svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.1 1.1-4.1-.3-.4a10.4 10.4 0 0 1-1.6-5.4C5.2 9.8 10 5.1 16 5.1s10.8 4.7 10.8 10.5S22 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>Escribinos por WhatsApp</a>
+              <a class="boton boton--secundario" href="tel:+5492944000000" data-ubicacion="contacto">Llamar al 2944 00-0000</a>
+            </div>
           </div>
         </div>
-        <address class="datos">
-          <p><strong>Teléfono:</strong> <a href="tel:{{TELEFONO_INTERNACIONAL}}" data-ubicacion="contacto_datos">{{TELEFONO_VISIBLE}}</a></p>
-          <p><strong>Email:</strong> <a href="mailto:{{EMAIL}}" data-ubicacion="contacto_datos">{{EMAIL}}</a></p>
-          <p><strong>Zona:</strong> {{ZONA}}</p>
-          <p><strong>Horario:</strong> {{HORARIO_VISIBLE}}</p>
-        </address>
+        <div class="contacto-grilla">
+          <div class="dato" data-revelar style="--d:0s"><span class="icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><h3>Teléfono</h3><a href="tel:+5492944000000" data-ubicacion="contacto_datos">2944 00-0000</a></div>
+          <div class="dato" data-revelar style="--d:.08s"><span class="icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><h3>Email</h3><a href="mailto:info@grupoadl.com.ar" data-ubicacion="contacto_datos">info@grupoadl.com.ar</a></div>
+          <address class="dato" data-revelar style="--d:.16s"><span class="icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><h3>Depósito</h3><p>Dirección de ejemplo 1234<br>San Carlos de Bariloche, Río Negro</p></address>
+          <div class="dato" data-revelar style="--d:.24s"><span class="icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3>Horario</h3><p>Lunes a viernes de 8 a 17 h</p></div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Visor de fotos de la galería -->
+  <dialog id="visor" class="visor" aria-label="Foto ampliada">
+    <img src="data:," alt="">
+    <p></p>
+    <button type="button" class="visor__cerrar" aria-label="Cerrar">✕</button>
+    <button type="button" class="visor__nav visor__nav--ant" aria-label="Foto anterior">‹</button>
+    <button type="button" class="visor__nav visor__nav--sig" aria-label="Foto siguiente">›</button>
+  </dialog>
+
   <footer class="pie">
-    <div class="contenedor pie__fila">
-      <p>© <span data-anio>2026</span> {{NOMBRE}}. {{SERVICIO_PRINCIPAL}} en {{ZONA}}.</p>
-      <nav aria-label="Legal">
-        <a href="/privacidad.html">Política de privacidad</a>
-        <a href="#" data-abrir-cookies data-solo-con-medicion>Configurar cookies</a>
-      </nav>
+    <div class="contenedor">
+      <div class="pie__grilla">
+        <div class="pie__marca">
+          <img src="/img/logo-blanco.svg" alt="ADL Alimentos del Lago" width="230" height="48" loading="lazy">
+          <!-- EJEMPLO: texto corto sobre la empresa -->
+          <p>Distribuidora de alimentos en Bariloche. Abastecemos almacenes, supermercados, hoteles y restaurantes de toda la región andina.</p>
+        </div>
+        <div>
+          <h2>Navegación</h2>
+          <ul>
+            <li><a href="/#nosotros">Quiénes somos</a></li>
+            <li><a href="/#cobertura">Zonas de reparto</a></li>
+            <li><a href="/quiero-ser-cliente/">Quiero ser cliente</a></li>
+            <li><a href="/trabaja-con-nosotros/">Trabajá con nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Marcas</h2>
+          <ul>
+            <li><a href="/marcas/valle-frio/">Valle Frío</a></li>
+            <li><a href="/marcas/cumbre-andina/">Cumbre Andina</a></li>
+            <li><a href="/marcas/bosque-nativo/">Bosque Nativo</a></li>
+            <li><a href="/marcas/">Ver todas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contacto</h2>
+          <ul>
+            <li><a href="tel:+5492944000000" data-ubicacion="pie">2944 00-0000</a></li>
+            <li><a href="mailto:info@grupoadl.com.ar" data-ubicacion="pie">info@grupoadl.com.ar</a></li>
+            <li>Dirección de ejemplo 1234, Bariloche</li>
+            <li>Lunes a viernes de 8 a 17 h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie__legal">
+        <p>© <span data-anio>2026</span> ADL Alimentos del Lago. Distribuidora de alimentos en Bariloche, Río Negro.</p>
+        <nav aria-label="Legal">
+          <a href="/privacidad.html">Política de privacidad</a>
+          <a href="#" data-abrir-cookies data-solo-con-medicion>Configurar cookies</a>
+        </nav>
+      </div>
     </div>
   </footer>
 
   <!-- Botón flotante de WhatsApp -->
-  <a class="whatsapp-flotante" href="https://wa.me/{{WHATSAPP}}?text={{MENSAJE_WA}}" target="_blank" rel="noopener" data-ubicacion="flotante" aria-label="Escribinos por WhatsApp">
-    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.1 1.1-4.1-.3-.4a10.4 10.4 0 0 1-1.6-5.4C5.2 9.8 10 5.1 16 5.1s10.8 4.7 10.8 10.5S22 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  <a class="whatsapp-flotante" href="https://wa.me/5492944000000?text=Hola%2C%20vengo%20de%20la%20web%20de%20ADL" target="_blank" rel="noopener" data-ubicacion="flotante" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.1 1.1-4.1-.3-.4a10.4 10.4 0 0 1-1.6-5.4C5.2 9.8 10 5.1 16 5.1s10.8 4.7 10.8 10.5S22 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
   </a>
 
   <!-- Aviso de cookies: solo aparece en el nivel "web completa" (cuando hay ID de Tag Manager) -->
