@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada | {{NOMBRE}}</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/config.js"></script>
+  <script src="/js/consent.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a href="/" class="marca" aria-label="{{NOMBRE}}, inicio">
+        <img src="/img/logo.svg" alt="{{NOMBRE}}" width="160" height="40">
+      </a>
+    </div>
+  </header>
+  <main class="pagina-simple">
+    <div class="contenedor angosto centrado">
+      <h1>No encontramos esta página</h1>
+      <p>Puede que el link esté mal escrito o que la página ya no exista.</p>
+      <div class="botones" style="justify-content:center">
+        <a class="boton" href="/">Volver al inicio</a>
+        <a class="boton boton--whatsapp" href="https://wa.me/{{WHATSAPP}}?text={{MENSAJE_WA}}" target="_blank" rel="noopener" data-ubicacion="404">Escribinos por WhatsApp</a>
+      </div>
+    </div>
+  </main>
+  <div id="aviso-cookies" class="aviso-cookies" role="dialog" aria-label="Aviso de cookies" hidden>
+    <p>Usamos cookies para medir las visitas y mejorar el sitio. <a href="/privacidad.html">Más información</a>.</p>
+    <div class="botones">
+      <button id="cookies-rechazar" class="boton boton--secundario boton--chico">Rechazar</button>
+      <button id="cookies-aceptar" class="boton boton--chico">Aceptar</button>
+    </div>
+  </div>
+</body>
+</html>

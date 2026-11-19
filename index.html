@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: servicio principal + zona + nombre. Máx. ~60 caracteres. -->
+  <title>{{SERVICIO_PRINCIPAL}} en {{ZONA}} | {{NOMBRE}}</title>
+  <!-- SEO: qué hace, dónde y por qué elegirlo. Máx. ~155 caracteres. -->
+  <meta name="description" content="{{DESCRIPCION_SEO}}">
+  <link rel="canonical" href="https://{{DOMINIO}}/">
+  <meta name="theme-color" content="#0F3D5E">
+
+  <!-- Vista previa al compartir (WhatsApp, Instagram, Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="{{NOMBRE}}">
+  <meta property="og:title" content="{{SERVICIO_PRINCIPAL}} en {{ZONA}} | {{NOMBRE}}">
+  <meta property="og:description" content="{{DESCRIPCION_SEO}}">
+  <meta property="og:url" content="https://{{DOMINIO}}/">
+  <meta property="og:image" content="https://{{DOMINIO}}/img/og-imagen.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Datos estructurados: le dicen a Google qué negocio es, dónde trabaja y cómo contactarlo.
+       Cambiá "LocalBusiness" por un tipo más específico si existe (ej. "Plumber", "Electrician",
+       "Restaurant", "BeautySalon", "AutoRepair"). Borrá "address" si no atiende al público. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{NOMBRE}}",
+    "description": "{{DESCRIPCION_SEO}}",
+    "url": "https://{{DOMINIO}}/",
+    "image": "https://{{DOMINIO}}/img/og-imagen.jpg",
+    "logo": "https://{{DOMINIO}}/img/logo.svg",
+    "telephone": "{{TELEFONO_INTERNACIONAL}}",
+    "email": "{{EMAIL}}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{DIRECCION}}",
+      "addressLocality": "{{LOCALIDAD}}",
+      "addressRegion": "{{PROVINCIA}}",
+      "addressCountry": "AR"
+    },
+    "areaServed": ["{{ZONA_1}}", "{{ZONA_2}}"],
+    "openingHours": "{{HORARIO_SCHEMA}}",
+    "sameAs": ["{{URL_INSTAGRAM}}", "{{URL_GOOGLE_MAPS}}"]
+  }
+  </script>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/consent.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a href="/" class="marca" aria-label="{{NOMBRE}}, inicio">
+        <img src="/img/logo.svg" alt="{{NOMBRE}}" width="160" height="40">
+      </a>
+      <button class="menu-boton" aria-expanded="false" aria-controls="menu">
+        <span class="sr">Abrir menú</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto" class="boton boton--chico">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO: qué hace + dónde + botón. Es lo primero que ve el visitante y Google. -->
+    <section class="hero">
+      <div class="contenedor hero__grilla">
+        <div>
+          <p class="etiqueta">{{TRAYECTORIA_CORTA}}</p>
+          <!-- Un solo H1 por página, con servicio + zona -->
+          <h1>{{SERVICIO_PRINCIPAL}} en {{ZONA}}</h1>
+          <p class="hero__bajada">{{PROPUESTA_DE_VALOR}}</p>
+          <div class="botones">
+            <a class="boton boton--whatsapp" href="https://wa.me/{{WHATSAPP}}?text={{MENSAJE_WA}}" target="_blank" rel="noopener" data-ubicacion="hero">Escribinos por WhatsApp</a>
+            <a class="boton boton--secundario" href="tel:{{TELEFONO_INTERNACIONAL}}" data-ubicacion="hero">Llamar al {{TELEFONO_VISIBLE}}</a>
+          </div>
+          <ul class="confianza">
+            <li>{{DATO_CONFIANZA_1}}</li>
+            <li>{{DATO_CONFIANZA_2}}</li>
+            <li>{{DATO_CONFIANZA_3}}</li>
+          </ul>
+        </div>
+        <img class="hero__imagen" src="/img/hero.webp" alt="{{ALT_HERO}}" width="720" height="540" fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- SERVICIOS: un bloque por servicio, cada título con su palabra clave -->
+    <section id="servicios" class="seccion">
+      <div class="contenedor">
+        <h2>Nuestros servicios en {{ZONA}}</h2>
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <img src="/img/servicio-1.webp" alt="{{ALT_SERVICIO_1}}" width="480" height="320" loading="lazy">
+            <h3>{{SERVICIO_1}}</h3>
+            <p>{{DESCRIPCION_SERVICIO_1}}</p>
+          </article>
+          <article class="tarjeta">
+            <img src="/img/servicio-2.webp" alt="{{ALT_SERVICIO_2}}" width="480" height="320" loading="lazy">
+            <h3>{{SERVICIO_2}}</h3>
+            <p>{{DESCRIPCION_SERVICIO_2}}</p>
+          </article>
+          <article class="tarjeta">
+            <img src="/img/servicio-3.webp" alt="{{ALT_SERVICIO_3}}" width="480" height="320" loading="lazy">
+            <h3>{{SERVICIO_3}}</h3>
+            <p>{{DESCRIPCION_SERVICIO_3}}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS / POR QUÉ ELEGIRNOS -->
+    <section id="nosotros" class="seccion seccion--alterna">
+      <div class="contenedor dos-columnas">
+        <div>
+          <h2>¿Por qué elegir {{NOMBRE}}?</h2>
+          <p>{{TEXTO_NOSOTROS}}</p>
+        </div>
+        <ul class="ventajas">
+          <li><strong>{{VENTAJA_1_TITULO}}</strong> {{VENTAJA_1_TEXTO}}</li>
+          <li><strong>{{VENTAJA_2_TITULO}}</strong> {{VENTAJA_2_TEXTO}}</li>
+          <li><strong>{{VENTAJA_3_TITULO}}</strong> {{VENTAJA_3_TEXTO}}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESEÑAS: solo reseñas reales del cliente (Google Maps, WhatsApp). Si no hay, borrar la sección. -->
+    <section id="resenas" class="seccion">
+      <div class="contenedor">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="resenas">
+          <figure class="resena">
+            <blockquote>{{RESENA_1}}</blockquote>
+            <figcaption>{{AUTOR_RESENA_1}}</figcaption>
+          </figure>
+          <figure class="resena">
+            <blockquote>{{RESENA_2}}</blockquote>
+            <figcaption>{{AUTOR_RESENA_2}}</figcaption>
+          </figure>
+          <figure class="resena">
+            <blockquote>{{RESENA_3}}</blockquote>
+            <figcaption>{{AUTOR_RESENA_3}}</figcaption>
+          </figure>
+        </div>
+        <p class="centrado"><a href="{{URL_GOOGLE_MAPS}}" target="_blank" rel="noopener">Ver todas las reseñas en Google</a></p>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES: responden búsquedas reales y ayudan en Google y en buscadores con IA -->
+    <section id="preguntas" class="seccion seccion--alterna">
+      <div class="contenedor angosto">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>{{PREGUNTA_1}}</summary>
+          <p>{{RESPUESTA_1}}</p>
+        </details>
+        <details>
+          <summary>{{PREGUNTA_2}}</summary>
+          <p>{{RESPUESTA_2}}</p>
+        </details>
+        <details>
+          <summary>{{PREGUNTA_3}}</summary>
+          <p>{{RESPUESTA_3}}</p>
+        </details>
+        <details>
+          <summary>¿En qué zonas trabajan?</summary>
+          <p>{{ZONAS_DETALLE}}</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion">
+      <div class="contenedor dos-columnas">
+        <div>
+          <h2>Pedí tu presupuesto</h2>
+          <p>{{TEXTO_CONTACTO}}</p>
+          <div class="botones">
+            <a class="boton boton--whatsapp" href="https://wa.me/{{WHATSAPP}}?text={{MENSAJE_WA}}" target="_blank" rel="noopener" data-ubicacion="contacto">WhatsApp</a>
+            <a class="boton boton--secundario" href="tel:{{TELEFONO_INTERNACIONAL}}" data-ubicacion="contacto">Llamar</a>
+          </div>
+        </div>
+        <address class="datos">
+          <p><strong>Teléfono:</strong> <a href="tel:{{TELEFONO_INTERNACIONAL}}" data-ubicacion="contacto_datos">{{TELEFONO_VISIBLE}}</a></p>
+          <p><strong>Email:</strong> <a href="mailto:{{EMAIL}}" data-ubicacion="contacto_datos">{{EMAIL}}</a></p>
+          <p><strong>Zona:</strong> {{ZONA}}</p>
+          <p><strong>Horario:</strong> {{HORARIO_VISIBLE}}</p>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <p>© <span data-anio>2026</span> {{NOMBRE}}. {{SERVICIO_PRINCIPAL}} en {{ZONA}}.</p>
+      <nav aria-label="Legal">
+        <a href="/privacidad.html">Política de privacidad</a>
+        <a href="#" data-abrir-cookies data-solo-con-medicion>Configurar cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="whatsapp-flotante" href="https://wa.me/{{WHATSAPP}}?text={{MENSAJE_WA}}" target="_blank" rel="noopener" data-ubicacion="flotante" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.5 1.8 6.4L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.1 1.1-4.1-.3-.4a10.4 10.4 0 0 1-1.6-5.4C5.2 9.8 10 5.1 16 5.1s10.8 4.7 10.8 10.5S22 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  </a>
+
+  <!-- Aviso de cookies: solo aparece en el nivel "web completa" (cuando hay ID de Tag Manager) -->
+  <div id="aviso-cookies" class="aviso-cookies" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+    <p>Usamos cookies para medir las visitas y mejorar el sitio. Podés aceptarlas o rechazarlas. <a href="/privacidad.html">Más información</a>.</p>
+    <div class="botones">
+      <button id="cookies-rechazar" class="boton boton--secundario boton--chico">Rechazar</button>
+      <button id="cookies-aceptar" class="boton boton--chico">Aceptar</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Sitio estático: no necesita build. Netlify usa 404.html automáticamente para las páginas que no existen.
+[build]
+  publish = "."
+
+# Seguridad básica
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Las imágenes no cambian seguido: el navegador las guarda 1 año (la web carga más rápido al volver)
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Una entrada <url> por cada página pública. La 404 no va. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://{{DOMINIO}}/</loc>
+    <lastmod>{{FECHA_ISO}}</lastmod>
+  </url>
+  <url>
+    <loc>https://{{DOMINIO}}/privacidad.html</loc>
+    <lastmod>{{FECHA_ISO}}</lastmod>
+  </url>
+</urlset>
