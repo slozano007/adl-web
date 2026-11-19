@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Una entrada <url> por cada página pública. La 404 no va. -->
+<!-- Una entrada <url> por cada página pública. La 404 no va. Si sumás una marca, agregá su página acá. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://{{DOMINIO}}/</loc>
-    <lastmod>{{FECHA_ISO}}</lastmod>
+    <loc>https://grupoadl.com.ar/</loc>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
-    <loc>https://{{DOMINIO}}/privacidad.html</loc>
-    <lastmod>{{FECHA_ISO}}</lastmod>
+    <loc>https://grupoadl.com.ar/marcas/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://grupoadl.com.ar/marcas/valle-frio/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://grupoadl.com.ar/marcas/cumbre-andina/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://grupoadl.com.ar/marcas/bosque-nativo/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://grupoadl.com.ar/quiero-ser-cliente/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://grupoadl.com.ar/trabaja-con-nosotros/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://grupoadl.com.ar/privacidad.html</loc>
+    <lastmod>2026-11-19</lastmod>
   </url>
 </urlset>
